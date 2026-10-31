@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f2ff" />
+  <title>Yuk Analisis — Dashboard Gudep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Yuk Analisis beranda">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span><strong>Yuk Analisis</strong><small>Analisis · Pantau · Kembangkan</small></span>
+      </a>
+      <nav class="side-nav" aria-label="Navigasi utama">
+        <button class="nav-link active" data-page="home"><span>⌂</span>Beranda</button>
+        <button class="nav-link" data-page="activities"><span>▦</span>Kegiatan</button>
+        <button class="nav-link" data-page="reports"><span>▥</span>Laporan</button>
+        <button class="nav-link" data-page="settings"><span>⚙</span>Pengaturan</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="note-star">✦</span><b>Terus bertumbuh!</b><p>Catat setiap langkah kecil untuk melihat perkembangan Gudep.</p></div>
+        <small>Yuk Analisis · Versi 1.0</small>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <strong>Yuk Analisis</strong>
+        </div>
+        <div class="page-heading"><span id="page-eyebrow">DASHBOARD</span><h1 id="page-title">Beranda</h1></div>
+        <div class="top-actions">
+          <button class="icon-button notification" aria-label="Notifikasi" title="Notifikasi">♧<em></em></button>
+          <button class="profile-chip" id="profile-chip"><span id="avatar-letter">A</span><b id="profile-name">Aspianto</b><small>⌄</small></button>
+        </div>
+      </header>
+
+      <section class="page active" id="page-home">
+        <div class="welcome-card">
+          <div><p class="eyebrow">DASHBOARD GUGUS DEPAN</p><h2>Halo, <span id="welcome-name">Aspianto</span>! <span class="wave">👋</span></h2><p>Selamat datang di Yuk Analisis.<br>Yuk, lihat perkembangan Gudep hari ini!</p></div>
+          <div class="welcome-art" aria-hidden="true"><span>↗</span><i>▂▅▇</i></div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card purple">
+            <div class="stat-top"><span class="stat-icon">♟</span><span class="stat-label">KEHADIRAN ANGGOTA</span></div>
+            <strong class="stat-value" id="attendance-value">—</strong>
+            <span class="stat-sub" id="attendance-sub">Belum ada data</span>
+            <div class="mini-chart"><svg viewBox="0 0 180 38" preserveAspectRatio="none"><path d="M0 31 C25 29 27 32 48 25 S76 31 94 18 S122 25 142 10 S165 8 180 3" /></svg></div>
+          </article>
+          <article class="stat-card blue">
+            <div class="stat-top"><span class="stat-icon">▣</span><span class="stat-label">PROGRAM TERLAKSANA</span></div>
+            <strong class="stat-value" id="program-value">—</strong>
+            <span class="stat-sub" id="program-sub">Belum ada data</span>
+            <div class="mini-chart"><svg viewBox="0 0 180 38" preserveAspectRatio="none"><path d="M0 32 C25 31 35 29 52 28 S74 34 90 21 S115 24 132 13 S158 8 180 3" /></svg></div>
+          </article>
+          <article class="stat-card orange">
+            <div class="stat-top"><span class="stat-icon">♜</span><span class="stat-label">TARGET TERCAPAI</span></div>
+            <strong class="stat-value" id="target-value">—</strong>
+            <span class="stat-sub" id="target-sub">Belum ada data</span>
+            <div class="mini-chart"><svg viewBox="0 0 180 38" preserveAspectRatio="none"><path d="M0 32 C22 30 32 34 51 26 S75 29 93 17 S120 27 139 11 S163 8 180 3" /></svg></div>
+          </article>
+        </div>
+
+        <article class="overall-card">
+          <div class="overall-star">★</div>
+          <div class="overall-copy"><span>PROGRES KESELURUHAN</span><strong id="overall-value">—</strong><small id="overall-status">Menunggu data kegiatan</small></div>
+          <div class="progress-ring" id="overall-ring"><div><b id="ring-value">—</b><small>PROGRES</small></div></div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-header"><div><span class="panel-icon">⌁</span><div><h3>Grafik Progres</h3><p>Perkembangan kegiatan Gudep</p></div></div>
+            <div class="segmented"><button class="period-btn active" data-period="week">Minggu Ini</button><button class="period-btn" data-period="month">Bulan Ini</button></div>
+          </div>
+          <div class="chart-wrap"><div class="y-labels"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div><svg id="progress-chart" viewBox="0 0 700 245" preserveAspectRatio="none" role="img" aria-label="Grafik progres kegiatan"></svg></div>
+          <div class="chart-x-labels" id="chart-labels"></div>
+        </article>
+
+        <article class="panel recent-panel">
+          <div class="panel-header"><div><span class="panel-icon">▦</span><div><h3>Kegiatan Terakhir</h3><p>Catatan aktivitas terbaru</p></div></div><button class="text-button" data-goto="activities">Lihat Semua <span>→</span></button></div>
+          <div id="recent-list" class="recent-list"></div>
+        </article>
+      </section>
+
+      <section class="page" id="page-activities">
+        <div class="section-intro"><div><p class="eyebrow">PENGELOLAAN DATA</p><h2>Daftar Kegiatan</h2><p>Catat, perbarui, dan pantau seluruh kegiatan Gudep.</p></div><button class="primary-button" id="add-activity">＋ Tambah Kegiatan</button></div>
+        <div class="toolbar"><label class="search-box">⌕ <input id="activity-search" placeholder="Cari nama kegiatan..." /></label><select id="activity-filter"><option value="all">Semua status</option><option value="done">Selesai</option><option value="progress">Berlangsung</option><option value="upcoming">Akan datang</option></select></div>
+        <div id="activity-list" class="activity-list"></div>
+      </section>
+
+      <section class="page" id="page-reports">
+        <div class="section-intro"><div><p class="eyebrow">RINGKASAN PERKEMBANGAN</p><h2>Laporan Gudep</h2><p>Pilih periode untuk melihat rekap kegiatan.</p></div><button class="primary-button" id="export-csv">↓ Ekspor CSV</button></div>
+        <div class="panel report-filter"><label>Dari tanggal<input type="date" id="report-start"></label><label>Sampai tanggal<input type="date" id="report-end"></label><button class="secondary-button" id="apply-report">Terapkan</button></div>
+        <div class="report-summary" id="report-summary"></div>
+        <div class="panel"><div class="panel-header"><div><span class="panel-icon">▤</span><div><h3>Rincian Kegiatan</h3><p>Data sesuai rentang tanggal yang dipilih</p></div></div></div><div id="report-table" class="table-wrap"></div></div>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="section-intro"><div><p class="eyebrow">PREFERENSI APLIKASI</p><h2>Pengaturan</h2><p>Atur identitas dan cara perhitungan progres.</p></div></div>
+        <div class="settings-grid">
+          <article class="panel settings-card"><div class="panel-header"><div><span class="panel-icon">☺</span><div><h3>Profil Pengguna</h3><p>Nama yang ditampilkan di dashboard</p></div></div></div><label class="field-label">Nama tampilan<input id="setting-name" maxlength="32" placeholder="Masukkan nama"></label><button class="primary-button" id="save-name">Simpan Nama</button></article>
+          <article class="panel settings-card"><div class="panel-header"><div><span class="panel-icon">⚖</span><div><h3>Bobot Penilaian</h3><p>Atur kontribusi setiap indikator</p></div></div></div><div class="weight-row"><label for="weight-attendance">Kehadiran</label><strong id="weight-attendance-label">30%</strong><input id="weight-attendance" type="range" min="0" max="100" value="30"></div><div class="weight-row"><label for="weight-program">Program terlaksana</label><strong id="weight-program-label">30%</strong><input id="weight-program" type="range" min="0" max="100" value="30"></div><div class="weight-row"><label for="weight-target">Target tercapai</label><strong id="weight-target-label">40%</strong><input id="weight-target" type="range" min="0" max="100" value="40"></div><p class="weight-total" id="weight-total">Total bobot: 100%</p><button class="primary-button" id="save-weights">Simpan Bobot</button></article>
+          <article class="panel settings-card privacy-card"><div class="panel-header"><div><span class="panel-icon">▣</span><div><h3>Penyimpanan Data</h3><p>Data tersimpan secara lokal di browser ini.</p></div></div></div><p>Versi awal belum menggunakan akun atau sinkronisasi antarperangkat. Hindari menghapus data browser jika ingin mempertahankan catatan.</p><button class="danger-button" id="clear-data">Hapus Semua Data Kegiatan</button></article>
+        </div>
+      </section>
+      <footer class="footer">Yuk Analisis <span>•</span> Catat prosesnya, rayakan perkembangannya.</footer>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navigasi bawah">
+    <button class="active" data-page="home"><span>⌂</span>Beranda</button><button data-page="activities"><span>▦</span>Kegiatan</button><button data-page="reports"><span>▥</span>Laporan</button><button data-page="settings"><span>⚙</span>Pengaturan</button>
+  </nav>
+
+  <dialog id="activity-dialog">
+    <form id="activity-form" method="dialog">
+      <div class="dialog-head"><div><p class="eyebrow">FORMULIR KEGIATAN</p><h2 id="dialog-title">Tambah Kegiatan</h2></div><button type="button" class="close-button" id="close-dialog">×</button></div>
+      <input type="hidden" id="activity-id">
+      <label class="field-label">Nama kegiatan *<input id="activity-name" required maxlength="80" placeholder="Contoh: Latihan SKU"></label>
+      <div class="form-grid"><label class="field-label">Tanggal mulai *<input type="date" id="activity-start" required></label><label class="field-label">Tanggal selesai *<input type="date" id="activity-end" required></label></div>
+      <div class="form-grid"><label class="field-label">Anggota hadir<input type="number" id="activity-present" min="0" value="0"></label><label class="field-label">Total anggota<input type="number" id="activity-total" min="0" value="0"></label></div>
+      <div class="form-grid"><label class="field-label">Program terlaksana<input type="number" id="activity-program-done" min="0" value="0"></label><label class="field-label">Total program<input type="number" id="activity-program-total" min="0" value="0"></label></div>
+      <div class="form-grid"><label class="field-label">Target terealisasi<input type="number" id="activity-target-done" min="0" value="0"></label><label class="field-label">Total target<input type="number" id="activity-target-total" min="0" value="0"></label></div>
+      <label class="field-label">Catatan<textarea id="activity-notes" rows="3" placeholder="Catatan kegiatan (opsional)"></textarea></label>
+      <p class="form-hint">Indikator yang belum diisi tidak dihitung sebagai 0%.</p>
+      <div class="dialog-actions"><button type="button" class="secondary-button" id="cancel-dialog">Batal</button><button type="submit" class="primary-button">Simpan Kegiatan</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
